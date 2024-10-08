@@ -2,14 +2,15 @@
     "version":2,
     "build":[
 {
-    "src":"*.js","use": "@vercel/node"
+    "src":"fronted/package.json","use": "@vercel/vite"
 }
     ],
     "routes":[
         {
-            "src":"/.*",
-            "dest":"/"
+            "src":"/(.*)",
+            "dest":"/dist/$1"
         }
-    ]
+    ],
+    "build Command": "npm run build"
     
 }

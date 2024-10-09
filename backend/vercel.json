@@ -10,7 +10,7 @@
             "src":"/(.*)",
             "dest":"/dist/$1"
         }
-    ],
-    "build Command": "npm run build"
+    ]
+    
     
 }

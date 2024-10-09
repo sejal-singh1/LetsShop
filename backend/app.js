@@ -14,8 +14,7 @@ const wrapAsync = require("./utils/wrapAsync.js");
 const ExpressError = require("./utils/ExpressError.js");
 const ApiFteature = require("./utils/feature.js");
 const cookieParser = require("cookie-parser");
-const dotenv=require("dotenv");
-dotenv.config();
+require("dotenv").config();
 
 const User = require("./module/user.js");
 const userRoutes = require("./routes/userRoutes.js");
@@ -44,13 +43,13 @@ process.env.JWT_SECRET = "gshekdewdwededknbeld3edjoend";
 process.env.JWT_EXPIRE = "5d";
 process.env.COOKIE_EXPIRE = "5";
 
-if(process.env.NODE_ENV!=="PRODUCTION"){
- const result= dotenv.config({path:"./.env"});
- if (result.error) {
-  throw result.error; // This will throw if there's an issue loading the .env file
-}
-console.log('Environment variables loaded:', result.parsed);
-}
+// if(process.env.NODE_ENV!=="PRODUCTION"){
+//  const result= dotenv.config({path:"./.env"});
+//  if (result.error) {
+//   throw result.error; // This will throw if there's an issue loading the .env file
+// }
+// console.log('Environment variables loaded:', result.parsed);
+// }
 
 
 
@@ -85,11 +84,11 @@ app.use("/api/users", orderRoutes);
 app.use("/api/users", paymentRoutes);
 
 
-// app.use(express.static(Path.join(__dirname,"../Frontend/dist")));
-// app.get("*",(req,res)=>{
-//   res.sendFile(Path.resolve(__dirname,"../Frontend/dist"))
+app.use(express.static(Path.join(__dirname,"../fronted/dist")));
+app.get("*",(req,res)=>{
+  res.sendFile(Path.resolve(__dirname,"../fronted/dist"))
 
-//  })
+ })
 
 
 

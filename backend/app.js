@@ -84,11 +84,11 @@ app.use("/api/users", orderRoutes);
 app.use("/api/users", paymentRoutes);
 
 
-app.use(express.static(Path.join(__dirname,"../fronted/dist")));
-app.get("*",(req,res)=>{
-  res.sendFile(Path.resolve(__dirname,"../fronted/dist"))
+// app.use(express.static(Path.join(__dirname,"../fronted/dist")));
+// app.get("*",(req,res)=>{
+//   res.sendFile(Path.resolve(__dirname,"../fronted/dist"))
 
- })
+//  })
 
 
 

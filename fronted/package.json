@@ -55,7 +55,7 @@
     "@babel/core": "^7.25.2",
     "@babel/preset-env": "^7.25.4",
     "@babel/preset-react": "^7.24.7",
-    "@types/react": "^18.3.3",
+    "@types/react": "^17.0.83",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
     "babel-loader": "^9.1.3",
